@@ -43,7 +43,6 @@ export class PacienteDialogComponent implements OnInit {
       this.pacienteService.setPacienteCambio(data);
       this.pacienteService.setMensajecambio("Se ha registrado un nuevo paciente");
     });
-
     this.cerrar();
   }
 

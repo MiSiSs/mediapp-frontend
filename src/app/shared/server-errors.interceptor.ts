@@ -24,16 +24,13 @@ export class ServerErrorsInterceptor implements HttpInterceptor{
                     }
                 }
             })).pipe(catchError((err) => {
-        
                 if(err.status === 400){
-                    console.log(err.message);
-                    this.snackBar.open(err.message, 'ERROR 400', { duration: 5000 });
+                    this.snackBar.open(err.error.mensaje, 'ERROR 400', { duration: 5000 });
                 }
                 else if(err.status === 404){
                     this.snackBar.open('No existe el recurso', 'ERROR 404', { duration: 5000 });
                 }
                 else if (err.status === 403) {
-                    console.log(err);
                     this.snackBar.open(err.error.error_description, 'ERROR 403', { duration: 5000 });
                 }
                 else if (err.status === 500) {
