@@ -1,0 +1,45 @@
+<mat-card class="example-full-width"> Ingrese los datos del paciente</mat-card>
+
+<form class="example-container" [formGroup]="form" #formPaciente="ngForm" (ngSubmit)="operar()">
+    <div [hidden]="true">
+        <mat-form-field class="example-full-width">
+            <input matInput placeholder="ID" required formControlName="id">
+        </mat-form-field>
+    </div>
+
+    <mat-form-field class="example-full-width">
+        <input matInput placeholder="Nombres" minlength="3" required formControlName="nombres">
+       <!--
+        <small *ngIf="f.nombres.error?.required && f.nombres.touched" class="invalido">Nombres es requerido</small>
+        <small *ngIf="f.apellidos.errors?.required && f.apellidos.touched" class="invalido">Apellido es requerido</small>
+        --> 
+    </mat-form-field>
+    <mat-form-field class="example-full-width">
+        <input matInput placeholder="Apellidos" required  formControlName="apellidos">
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width">
+        <input matInput placeholder="DNI" required formControlName="dni">
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width">
+        <input matInput placeholder="Telefono" formControlName="telefono">
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width">
+        <input matInput placeholder="Direccion" formControlName="direccion"> 
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width">
+        <input matInput placeholder="Email" formControlName="email">
+    </mat-form-field>
+
+    <button mat-raised-button color="primary" type="submit" [disabled]="formPaciente.invalid">
+        <mat-icon>done</mat-icon>
+        <span>Aceptar</span>
+    </button>
+    <button mat-raised-button color="accent" routerLink='/paciente' type="button">
+        <mat-icon>close</mat-icon>
+        <span>Cancelar</span>
+    </button>
+</form>

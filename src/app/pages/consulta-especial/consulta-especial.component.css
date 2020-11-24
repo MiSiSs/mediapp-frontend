@@ -1,0 +1,28 @@
+.example-container{
+    display: flex;
+    flex-direction: column;
+}
+.example-container>*{
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.example-spacer {
+    flex: 1 1 auto;
+  }
+
+  button{
+    float: right;
+    width: 50%;
+    margin-left: auto;
+  }
+
+  .mat-list-item{
+    float: left;
+    width: 100%;
+  }
+
+  .textarea{
+    width: 100%;
+  }

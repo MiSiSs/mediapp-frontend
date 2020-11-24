@@ -1,0 +1,21 @@
+.example-container{
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+}
+.mat-form-paciente > mat-form-field{
+    float: left;
+    width: 60%;
+}
+
+.mat-form-paciente > button{
+    float: right;
+    width: 35%;
+}
+
+.mat-form-fecha{
+    float: left;
+    width: 60%;
+}
