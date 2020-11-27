@@ -8,7 +8,7 @@ Proyecto de evaluación para el Curso Mitocode Java Full Stack.
  Crear un CRUD de la tabla “Signos”, para ello deberá crear los servicios a nivel backend
  Crear un CRUD del componente “Signos” en Angular, similar al componente “Paciente” visto en el curso
  Los datos temperatura, pulso, ritmo son STRING
- Puede usar un autocomplete o comobox (select)
- El reto del nuevo paciente es opcional
+ Puede usar un autocomplete o comobox (select) [Se ha desarrollado Autocomplete]
+ El reto del nuevo paciente es opcional [Se ha desarrollo como reto personal]
  Solo debe mostrarse un componente a la vez, o el listado o el de edición (sugerencia, ngIf route.children == 0)
 
