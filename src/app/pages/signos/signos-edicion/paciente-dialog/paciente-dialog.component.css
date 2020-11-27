@@ -1,0 +1,4 @@
+.form-paciente{
+    display: flex;
+    flex-direction: column;
+}

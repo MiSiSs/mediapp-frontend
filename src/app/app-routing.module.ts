@@ -26,7 +26,7 @@ import { SignosComponent } from './pages/signos/signos.component';
 
 const routes: Routes = [
   {
-    path: 'bienvenido', component: BienvenidoComponent,canActivate: [GuardService]
+    path: 'bienvenido', component: BienvenidoComponent
   },
   {
     path: 'perfil', component: PerfilComponent

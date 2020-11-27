@@ -43,7 +43,6 @@ export class LoginService {
 
   cerrarSesion(){
     let token = sessionStorage.getItem(environment.TOKEN_NAME);
-    console.log("cerrarSesion "+token);
     if(token){
       this.http.get(`${environment.HOST}/tokens/anular/${token}`).subscribe(() => {
         sessionStorage.clear();
@@ -71,5 +70,3 @@ export class LoginService {
     });
   }
 }
-
-//1:56:28

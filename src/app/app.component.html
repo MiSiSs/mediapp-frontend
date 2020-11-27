@@ -13,20 +13,26 @@
       </button>
 
       <mat-menu #menu="matMenu">
+        <!--
         <button mat-menu-item (click)="perfil = true">
           <mat-icon>account_box</mat-icon>
           <span>Mi Perfil</span>
-        </button>
+        </button> -->
         <button mat-menu-item (click)="sidenav.opened = false "(click)="loginService.cerrarSesion();">
           <mat-icon>exit_to_app</mat-icon>
           <span>Cerrar Sesión</span>
-        </button>
+        </button>    
       </mat-menu>
   </mat-toolbar>
 
-  <div #perfil *ngIf="perfil && loginService.estaLogueado()">
-      <app-perfil></app-perfil>
-  </div>
+  <mat-expansion-panel *ngIf="loginService.estaLogueado()">
+    <mat-expansion-panel-header>
+        <span>Mi Perfil</span>
+        <mat-icon>account_circle</mat-icon>      
+    </mat-expansion-panel-header>
+    <app-perfil></app-perfil>
+  </mat-expansion-panel>
+
   <mat-sidenav-container class="example-sidenav-container">
 
     <mat-sidenav #sidenav style="width: 200px" mode="push">

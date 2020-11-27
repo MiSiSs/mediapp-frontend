@@ -1,6 +1,6 @@
 <mat-toolbar>Nuevo Paciente</mat-toolbar>
 
-<form [formGroup]="form" #formPaciente="ngForm" (ngSubmit)="aceptar()">
+<form class="form-paciente" [formGroup]="form" #formPaciente="ngForm" (ngSubmit)="aceptar()">
     <mat-form-field>
         <input matInput placeholder="Nombres" required formControlName="nombres">
     </mat-form-field>

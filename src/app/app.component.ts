@@ -1,7 +1,8 @@
 import { ActivatedRoute, Router } from '@angular/router';
 import { LoginService } from './_service/login.service';
 import { Menu } from './_model/menu';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { MatAccordion } from '@angular/material/expansion';
 
 @Component({
   selector: 'app-root',
@@ -10,9 +11,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AppComponent implements OnInit{
   title = 'mediapp-frontend';
-
+  @ViewChild(MatAccordion) accordion: MatAccordion;
   menus: Menu[];
-  perfil: boolean;
+  perfil: boolean = false;
 
   constructor(
     public loginService: LoginService
